@@ -1,0 +1,21 @@
+{% extends "D:/CLASES PYTHON/Proyecto Final/ProyectoFinal/AppFinal/templates/AppFinal/padre.html" %}
+{% load static %}
+{% block Hero %} 
+    {{mensaje}}
+    <div class="masthead-subheading">Las Mejores Peliculas En </div>
+    <div class="masthead-heading text-uppercase"> Coder Flix</div>
+{% endblock %}
+
+{% block formulario %} 
+    <form action="" method="POST"> {% csrf_token %}
+    
+        <table>
+
+            {{formulario1.as_table}}
+        
+        </table>
+        
+        
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock %}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a class="navbar-brand" href="{% url 'Inicio' %}">CoderFlix</a>
+    <button>
+       
+        <a href="{% url 'Inicio' %}"> Regresar </a>
+    </button>
+
+    {% for Peliculas in object_list %}
+
+    <p>Pelicula: {{Peliculas.nombre}}</p>
+    <p>Duracion: {{Peliculas.duracion}}</p>
+
+    <button>
+       
+        <a href="{% url 'detallePelicula' Peliculas.id %}"> Ver Pelicula </a>
+    </button>
+    <button>
+       
+        <a href="{% url 'editarPelicula' Peliculas.id %}"> Editar Pelicula </a>
+    </button>
+    <button>
+       
+        <a href="{% url 'eliminarPelicula' Peliculas.id %}"> Eliminar Pelicula </a>
+    </button>
+   
+<br>
+    ----------------------------------
+
+
+    {% endfor %}
+    <br>
+    <br>
+<br>
+
+    <button>
+       
+        <a href="{% url 'crearPelicula' %}"> Crear Pelicula </a>
+    </button>
+
+</body>
+</html>
+

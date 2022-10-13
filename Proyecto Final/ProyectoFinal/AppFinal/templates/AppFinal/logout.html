@@ -1,0 +1,14 @@
+{% extends "D:/CLASES PYTHON/Proyecto Final/ProyectoFinal/AppFinal/templates/AppFinal/padre.html" %}
+{% load static %}
+{% block Hero %} 
+    <div class="masthead-heading text-uppercase"> Cierre de Sesion</div>
+    <form action="" method="POST"> {% csrf_token %}
+    
+        {{formulario.as_p}}
+        
+        <button type="submit"> Cerrar Sesion</button>
+        
+        
+    </form>
+{% endblock %}
+

@@ -1,0 +1,15 @@
+{% extends "D:/CLASES PYTHON/Proyecto Final/ProyectoFinal/AppFinal/templates/AppFinal/padre.html" %}
+{% load static %}
+{% block Hero %} 
+    <div class="masthead-subheading">Registro de cuenta </div>
+
+    <form action="" method="POST"> {% csrf_token %}
+    
+        {{formulario.as_p}}
+        
+        <button type="submit"> Registrarse </button>
+        
+        
+    </form>
+{% endblock %}
+
